@@ -1,0 +1,182 @@
+
+body {
+    font-family: "Roboto";
+    width: 1110;
+    /*height: 1838px;*/
+}
+.nav {
+    list-style: none;
+}
+
+.nav a {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #555252;
+    margin: 34px;
+}
+a {
+    color: #0f0101;
+}
+.point_1 {
+    color:#4affff;
+}
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.logo::first-letter {
+    color: #1abc9c;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+/*.logo::before {
+    content: url("../img/logo_m.jpg");
+    width: auto;
+    height: 14px;
+}*/
+
+li {
+    float: left;
+    margin: 34px;
+}
+.logo {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-25%);
+}  
+/*.navigation {
+    position: relative;
+}*/
+
+
+.shop-item {
+    width: 255px;
+    height: 282px;
+}
+.name {
+    width: 200px;
+    height: 40px;
+    text-align: left;
+    font-size: 18px;
+    background: #323232;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.prise{
+    width: 55px;
+    height: 40px;
+    background: #6c6969;
+}
+.name {
+    float: left;
+}
+.prise {
+    float: right;
+}
+
+.shop-item {
+    float: left;
+    margin: 15px;
+}
+
+.section {
+    padding: 50px;
+}
+
+.news section {
+    width: 350px;
+    display: inline-block;
+    margin: 8px;
+}
+.title {
+    width: 1110px;
+    text-align: center;
+    font-size: 48px;
+    color: #555252;
+    text-transform: uppercase;
+}
+.head {
+    width: 1110px;
+    text-align: center;
+    font-size: 48px;
+    color: #555252;
+    text-transform: uppercase;
+}
+.latest {
+    margin-left: 24px;
+}
+.h3 {
+    font-family: Open+Sans;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555252;
+}
+.h3::after {
+    content: " ";
+    background: #4ec6ab;
+    height: 3px;
+    width: 136px;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.head::after{
+    content: " ";
+    background: #4ec6ab;
+    height: 7px;
+    width: 164px;
+    display: block;
+    margin-left: 468px;
+    margin-top: 32px; 
+    margin-bottom: 81px;
+}
+.title::after{
+    content: " ";
+    background: #4ec6ab;
+    height: 7px;
+    width: 164px;
+    display: block;
+    margin-left: 468px;
+    margin-top: 32px;
+    margin-bottom: 81px;
+}
+
+p {
+    font-family: Open+Sans;
+    font-size: 14px;
+    font-weight: 400;  
+    color: #6c6969;
+}
+.more {
+    width: 154px;
+    height: 51px;
+    background: #4ec6ab;
+    color: #ffffff;
+    font-family: Open+Sans;
+    border-radius: 5px;
+}
+.ln {
+    margin-bottom: 40px;
+}
+.shop-item{
+    font-size: 18px;
+}
+.sct:hover {
+    color: #1abc9c;
+}
+
+
+
+    
+
