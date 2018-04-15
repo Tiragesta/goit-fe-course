@@ -1,9 +1,10 @@
-
 body {
-    font-family: "Roboto";
-    width: 1110;
-    /*height: 1838px;*/
+    margin: 0px;
+    width: 1110px;
+    height: 1720px;
+    font-family: Roboto;
 }
+
 .nav {
     list-style: none;
 }
@@ -19,10 +20,12 @@ body {
     text-transform: uppercase;
     font-size: 30px;
     color: #555252;
-    margin: 34px;
+    margin: 0px;
 }
 a {
     color: #0f0101;
+    font-family: Open+sans;
+    font-weight: 700;
 }
 .point_1 {
     color:#4affff;
@@ -44,26 +47,30 @@ a {
     width: auto;
     height: 14px;
 }*/
-
 li {
-    float: left;
-    margin: 34px;
+    float: right;
+    margin-left: 65px;
 }
 .logo {
     float: left;
-    position: relative;
-    top: 50%;
-    transform: translateY(-25%);
-}  
-/*.navigation {
-    position: relative;
-}*/
-
+    /*position: relative;
+    top: 75%;
+    transform: translateY(-25%);*/
+    margin-right: 150px;
+    border: 0px;
+}
+li {
+    float: left;
+    line-height: 42px;
+}
 
 .shop-item {
     width: 255px;
     height: 282px;
+    margin: 0px;
+    margin-bottom: 50px;
 }
+
 .name {
     width: 200px;
     height: 40px;
@@ -72,22 +79,38 @@ li {
     background: #323232;
     color: #ffffff;
     text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px;
 }
-.prise{
+
+.prc {
     width: 55px;
     height: 40px;
-    background: #6c6969;
+    text-align: center;
+    font-size: 18px;
+    background: #8c8c8c;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0px;
+    font-weight: 700;  
+}
+.underblock {
+    margin-top: -5px;
+}
+
+.prc {
+    float: right;
 }
 .name {
     float: left;
 }
-.prise {
+/*.prs {
     float: right;
-}
+}*/
 
 .shop-item {
     float: left;
-    margin: 15px;
+    margin-right: 22px;
 }
 
 .section {
@@ -97,7 +120,7 @@ li {
 .news section {
     width: 350px;
     display: inline-block;
-    margin: 8px;
+    margin-right: 17px;
 }
 .title {
     width: 1110px;
@@ -113,9 +136,7 @@ li {
     color: #555252;
     text-transform: uppercase;
 }
-.latest {
-    margin-left: 24px;
-}
+
 .h3 {
     font-family: Open+Sans;
     font-size: 18px;
@@ -172,10 +193,15 @@ p {
 .shop-item{
     font-size: 18px;
 }
-.sct:hover {
-    color: #1abc9c;
+.shop-item:hover {
+    cursor: pointer;
 }
-
+.shop-item:hover .name {
+    background-color: #1abc9c;
+}
+.shop-item:hover .prc {
+    background-color: #7fd9c7;
+}
 
 
     
