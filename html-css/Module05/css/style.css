@@ -6,15 +6,27 @@ body {
     width: 1600px;
     height: 1455px;
 }
+
+.container {
+    max-width: 1111px;
+    width: 100%;
+    margin: 0 auto;
+}
+.logo_wrapper {
+    display: inline-block;
+}
+
+.navigation {
+        display: inline-block;
+        float: right;
+}
 .logo {
     font-family: Roboto;
     font-size: 30px;
     color: #555252;
     text-transform: uppercase;
-    position: relative;
-    margin-left: 245px;
-    margin-top: 38px;
-    margin-bottom: 32px;
+    /*position: relative;*/
+    padding: 32px;
 }
 .logo::first-letter {
     color: #1abc9c;
@@ -29,6 +41,8 @@ body {
 a {
     text-decoration: none; 
     color: #0f0101;
+    line-height: 30px;
+    vertical-align: bottom;
 }
 .submenu {
     color: #1abc9c;
@@ -42,10 +56,10 @@ a {
     margin-left: 34px;
 }
 .menu {
-    position: absolute;
-    top: 54px;
-    left: 643px;
+    display: inline-block;
+    padding: 32px;
 }
+
 main {
     background: #e9f0fd;
 }
