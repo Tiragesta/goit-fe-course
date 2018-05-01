@@ -41,18 +41,19 @@ a {
     color: #b0e9de;
     text-transform: uppercase;
     text-decoration: none;
-    /*display: block;*/
+    
 }
-.ab {
+a:hover {
     color: #f38181;
    
 }
-.ab::after {
+a:hover::after {
     content: "";
     background: #f38181;
     height: 3px;
     width: 50px;
     display: block;
+    margin: 0 auto;
 }
 
 .info {
@@ -97,14 +98,11 @@ h4 {
     line-height: 24px;
     text-align: left;
 }
-
 .section {
     height: 170px;
     width: 355px;
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
-
 }
 .icon_box {
     width: 80px;
@@ -113,6 +111,7 @@ h4 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .person {
     height: 538px;
@@ -130,20 +129,24 @@ h4 {
     text-align: center;
     margin-bottom: 90px;
 }
-
 .foto {
-    width: 380px;
     display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform .2s linear;
+}
+.prs {
     position: relative;
-    transition: transform 0.2s linear;
 }
 .fon {
     width: 378px;
     height: 470px;
     background-color: #95e1d3;
     position: absolute;
-    transform: translateY(-474px);
     z-index: -1;
+    left: 0;
+    top: 0px;
 }
 .hov {
     width: 380px;
@@ -155,17 +158,16 @@ h4 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    opacity: 0.9;
     background: none;
     z-index: 1;
-    transition: transform 0.2s linear;
+    transition: transform .2s linear;
 }
 .hov:hover{
-    background-image: linear-gradient(0deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
 }
 .foto:hover {
     transform: translate3d(-20px, -20px, 0px);
-    
+ 
 }
 /*menu icon*/
 
@@ -228,15 +230,6 @@ hr {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.foot_rt input {
-    width: 228px;
-    height: 37px;
-    font-family: Roboto;
-    color: #cccccc;
-    font-size: 15px;
-    font-weight: 400;
-    font-style: italic;
-}
 .foot_rt button {
     height: 40px;
     width: 150px;
@@ -246,8 +239,24 @@ hr {
     font-weight: 700;
     text-align: center;
     border-radius: 0px;
+    border: none;
+    cursor: pointer;
 }
-.foot_rt:hover button {
+.foot_rt input {
+    width: 228px;
+    font-family: Roboto;
+    color: #cccccc;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    border-right: 1px solid transparent;
+    border: 1px solid #e7e7e7;
+    }
+.foot_rt button:hover {
     color: #ffffff;
     background-color: #95e1d3;
 }
