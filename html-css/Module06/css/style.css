@@ -59,6 +59,9 @@ a::after {
     left: 0;
     right: 0;
     bottom: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s linear;
 }
 a:hover::after {
     visibility: visible;
