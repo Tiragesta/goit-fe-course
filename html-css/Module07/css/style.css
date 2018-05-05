@@ -1,0 +1,209 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+   
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+body {
+    width: 1400px;
+    height: 1318px;
+    margin: 0 auto; 
+}
+.logo {
+    font-family: 'Italianno', cursive;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fed136;
+}
+.point {
+    list-style: none;
+}
+
+a {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 400;
+    color: #4e4e4e;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover{
+    color: #fed443;
+}
+.wrapper {
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul {
+    width: 485px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    color: #222222;
+    font-size: 40px;
+    line-height: 75px;
+    text-align: center;
+    margin-top: 128px;
+    text-transform: uppercase;
+}
+.m_head {
+    color:#777777;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 65px;
+}
+.srv {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.container {
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+}
+h2 {
+    font-family: "Montserrat";
+    color:#222222;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 75px;
+}
+p {
+    font-family: "Montserrat";
+    color:#777777;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*icon*/
+.img {
+    position: relative;
+    width: 73px;
+    height: 74px;
+}
+.icon {
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+}
+/*form*/
+.form {
+    width: 1400px;
+    height: 676px;
+    background-color: #222222;
+    margin-top: 118px;
+    position: relative;
+}
+.bgd {
+    position: absolute;
+    top: 105px;
+    right: 0px;
+}
+.name {
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 40%;
+    font-family: Montserrat;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;       
+}
+input {
+    width: 455px;
+    height: 52px;
+    margin-left: 30px;
+    color: #c4c4c4;
+    font-family: Montserrat;
+    color:#bbbbbb;
+    font-size: 14px;
+    font-weight: 700;
+    text-indent: 20px;
+    text-transform: uppercase;
+    margin: 0px;
+    vertical-align: middle;
+}
+input:not(:nth-of-type(3n+3)) {
+    margin-bottom: auto;
+}
+.big {
+    height: 210px; 
+    width: 455px;
+    color: #c4c4c4;
+    font-family: Montserrat;
+    color:#bbbbbb;
+    font-size: 14px;
+    line-height: 60px;
+    font-weight: 700;
+    text-indent: 20px;
+    text-transform: uppercase;
+}
+.login {
+    height: 210px;
+    width: 940px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.button {
+    width: 240px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+.button:hover {
+    color: #ffffff;
+    background-color: #fed136;
+}
+
+input:required:invalid {
+    outline: 1px solid #f91207;
+}
+input:required:valid {
+    outline: 1px solid #29d136;
+}
+
+
