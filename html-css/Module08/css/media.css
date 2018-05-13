@@ -1,6 +1,6 @@
 @media (max-width: 747px) {
     body {
-        max-width: 320px;
+        width: 320px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -13,10 +13,11 @@
     }
     .log {
         display: inline-block;
-        
         margin-bottom: 110px;
     }
-   
+   .logo {
+       margin-bottom: 37px;
+   }
     .person{
         margin-bottom: 24px;
         width: 320px;
@@ -30,7 +31,7 @@
         margin-bottom: 57px;
     }
 }
-@media (min-width: 748px) {
+@media (min-width: 748px) and (max-width: 1439px) {
     body {
         max-width: 748px;
         margin: 0 auto;
@@ -44,11 +45,20 @@
         width: 748px;
         height: 700px;
     }
-    .navigation {
+    .logo, .log {
+        list-style: none;
+        display: inline-block;
+    }
+    .logo {
+        margin-right: 200px;
+    }
+    .nav {
+        width: 660px;
+        height: 74px;
         margin: 0 auto;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-end;
         margin-bottom: 150px;
     }
@@ -62,8 +72,15 @@
     .log:nth-child(2){
         order: 3;
     }
+    h3{
+        font-size: 52px;
+    }
     .about {
+        font-size: 24px;
         padding: 30px 0;
+    }
+    .person {
+        height: 242px;
     }
     .section {
         display: flex;
@@ -93,11 +110,22 @@
         width: 1440px; 
         height: 700px; 
     }
-    .navigation {
+    .logo, .log {
+        list-style: none;
+        display: inline-block;
+    }
+    .logo {
+        margin-right: 500px;
+    }
+    .nav {
+        width: 940px;
+        height: 76px;
+        margin: 0 auto;
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
+        
         margin-bottom: 150px;
     }
     .logo:nth-child(3) {
@@ -122,8 +150,22 @@
         width: 1440px;
         height: 290px;
     }
+    h3{
+        font-size: 52px;
+    }
+    .about {
+        font-size: 24px;
+    }
+
+    .person:nth-child(2) {
+        order: 1;
+    }
+    .person:nth-child(4){
+        order: 2;
+    }
+    
     .footer input {
-        margin-left: 380px;
+        margin-left: 580px;
         margin-bottom: 72px;
     }
 }
