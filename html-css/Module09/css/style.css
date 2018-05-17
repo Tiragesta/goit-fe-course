@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    margin: auto;
+    text-align: center;
+    max-width: 940px;
+    min-width: 320px;
+}
+/*header*/
+.fon {
+    height: 540px;
+    background: #1a1915;
+    opacity: 0.9;
+}
+.log {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    padding: 0 25px;
+}
+
+.logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+h3 {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    color:#ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+.about {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    padding: 17px 0;
+}
+.button {
+    width: 280px;
+    border-radius: 19px;
+    font-family: Montserrat;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 39px;
+    background: none;
+    border: none;
+}
+.button:hover{
+    background: #ff4e50;
+}
+
+.log:hover {
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+
+/*main*/
+h1 {
+    text-align: center;
+    font-family: Montserrat;
+    color:#333333;
+    font-size: 22px;
+    font-weight: 700;   
+}
+.icon{
+    position: relative;
+    width: 121px;
+    height: 121px;
+    margin: 0 auto;
+}
+.icon_fon {
+    display: inline-block;
+    position: absolute;
+    top: 85px;
+    left: 84px;
+}
+.icon_id {
+    position: absolute;
+    display: inline-block;
+    top:95px;
+    left: 97px;
+}
+h4 {
+    font-family: Montserrat;
+    color:#333333;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 44px;
+}
+.some {
+    font-family: Roboto;
+    color:#666666;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+.head {
+    margin-bottom: 24px;
+    margin-top: 65px;
+}
+/*footer*/
+.foot {
+    width: 280px;
+    border-radius: 19px;
+    font-family: Montserrat;
+    color:#ff4e50;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: center;
+    background: none;
+    border: 2px solid transparent;
+ }
+ .foot:hover{
+    border: 2px solid #ff4e50;    
+}
+.end {
+    padding-top: 26px;
+}
