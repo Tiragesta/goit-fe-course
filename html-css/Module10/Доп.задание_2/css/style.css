@@ -1,0 +1,13 @@
+.box {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    background: url(../img/nature.jpg) no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .box {
+      background: url(../img/nature@2x.jpg) no-repeat;
+      background-size: 400px;
+    }
+}
