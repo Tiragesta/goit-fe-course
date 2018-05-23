@@ -1,7 +1,8 @@
 @media (max-width: 768px){
     .fon {
         background-image: url('../img/img1.png'); 
-        height: 540px;   
+        height: 540px;
+        width: 320px;   
     }
     .team [class*="col-"]:not(:last-child){
         margin-bottom: 30px;
@@ -20,6 +21,7 @@
     .fon {
         background-image: url('../img/img2.png');
         height: 700px;
+        width: 720px;
     }
     .team [class*="col-"]:nth-child(-n+2){
         margin-bottom: 50px;
@@ -39,6 +41,7 @@
     .fon {
         background-image: url('../img/img.png');
         height: 700px;
+        width: 960px;
     }
     .menu {
         margin-bottom: 148px;

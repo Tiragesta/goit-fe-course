@@ -13,6 +13,7 @@
     height: 540px;
     background: #1a1915;
     opacity: 0.9;
+    margin: 0 auto;
 }
 .log {
     text-decoration: none;
