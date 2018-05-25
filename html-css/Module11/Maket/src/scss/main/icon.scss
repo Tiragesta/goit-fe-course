@@ -1,0 +1,24 @@
+.icon {
+    width: 55px;
+    height: 55px;
+    background-color: $some-color;
+    &:hover {
+        background-color: $secondary-green-color;
+        display: block;
+    }
+}
+
+.person-search {
+    visibility: hidden;
+
+}
+.person-search svg {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    fill: $hover-color;
+}
+.icon:hover svg {
+    fill: $primary-white-color;
+}

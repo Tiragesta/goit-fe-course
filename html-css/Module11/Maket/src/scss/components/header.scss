@@ -1,0 +1,21 @@
+header {
+    display: block;
+    width: 1918px;
+    height: 1000px;
+    background: url(../img/banner.png);
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        header {
+          background: url('../img/banner@2x.png') no-repeat;
+          background-size: 1918px;
+        }
+    }
+}
+
+.page-header:hover{
+    height: 1000px;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9)));
+    background: -webkit-linear-gradient(bottom, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    background: -o-linear-gradient(bottom, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    background: linear-gradient(0deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);   
+}

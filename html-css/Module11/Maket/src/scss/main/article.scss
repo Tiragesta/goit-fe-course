@@ -1,0 +1,38 @@
+.article{
+    width: 1190px;
+    margin: 0 auto;
+    &__info {
+        font-family: $second-font-stack;
+        color: $primary-dark-color;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center; 
+        margin-top: 128px;
+    }
+    &__text {
+        font-family: $last-font-stack;
+        color:$naitral-color;
+        font-size: $secondary-text-size;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 90px;
+    }
+}
+.article__head {
+    font-family: $main-font-stack;
+    color: $primary-dark-color;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    &::after {
+        content: "";
+        background: $hover-color;
+        height: 3px;
+        width: 50px;
+        display: block;
+        margin-left: 575px;
+        margin-bottom: 57px;
+        margin-top: 40px;
+    }
+}

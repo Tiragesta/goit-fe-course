@@ -1,0 +1,25 @@
+$primary-color: #424242;
+$primary-hover-color: #03A9F4;
+$primary-font-size: 18px;
+$primary-font-stak: Roboto, sans-serif;
+
+@mixin font-settings ($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
+
+.box-text {
+    @include font-settings (24px, 1.5);
+    
+    color: $primary-color;
+    font-size: $primary-font-size;
+    font-family: $primary-font-stak;
+    &:hover{
+        color: $primary-hover-color;
+    } 
+}
+
+@mixin font-settings ($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}

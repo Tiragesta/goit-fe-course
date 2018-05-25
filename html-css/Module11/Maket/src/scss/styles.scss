@@ -1,0 +1,31 @@
+/*
+   Import partials below
+*/
+@import 'helpers/variables.scss';
+@import 'mixin.scss';
+@import 'normalize.scss';
+@import 'base.scss';
+
+
+/*components*/
+@import 'components/site-logo.scss';
+@import 'components/page-wrapper.scss';
+@import 'components/header';
+@import 'components/site-header';
+@import 'components/nav-menu';
+
+/*main*/
+
+@import 'main/main-container.scss';
+@import 'main/article.scss';
+@import 'main/box-text.scss';
+@import 'main/person-section.scss';
+@import 'main/icon.scss';
+
+/*footer*/
+
+@import 'footer/foot-box.scss';
+
+
+
+

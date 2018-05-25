@@ -1,0 +1,124 @@
+.section {
+    width: 380px;
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.box-icon svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 0 20px;
+    fill: $secondary-green-color;
+}
+.container {
+    width: 1190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.person {
+    height: 538px;
+    width: 1190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.person-section__foto {
+    display: block;
+    width: 380px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    &:hover {
+        -webkit-transform: translate3d(-20px, -20px, 0px);
+                transform: translate3d(-20px, -20px, 0px); 
+    }
+}
+.person-section {
+    position: relative;
+}
+.person-section__fon {
+    width: 378px;
+    height: 470px;
+    background-color: $secondary-green-color;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0px;
+}
+.person-search {
+    @include center-flex('all');
+    width: 380px;
+    height: 474px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    background: none;
+    z-index: 1;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    &:hover{
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9)));
+        background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+        background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+        background-image: linear-gradient(0deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    }
+}
+
+
+
+.person-section:hover .person-search {
+    visibility: visible;
+}
+.person-section__name {
+    font-family: $main-font-stack;
+    color:$primary-dark-color;
+    font-size: $main-text-size;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.person-section__prof {
+    font-family: $last-font-stack;
+    color: $naitral-color;
+    font-size: $secondary-text-size;
+    font-weight: 400px;
+    line-height: $main-text-height;
+    font-style: italic;
+    text-align: center;
+}

@@ -1,0 +1,8 @@
+.box-text {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #424242;
+  font-size: 18px;
+  font-family: Roboto, sans-serif; }
+  .box-text:hover {
+    color: #03A9F4; }

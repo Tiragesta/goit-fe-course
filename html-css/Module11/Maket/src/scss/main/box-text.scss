@@ -1,0 +1,16 @@
+.box-text__head {
+    font-family: $main-font-stack;
+    font-size: $main-text-size;
+    text-transform: uppercase;
+    color: $primary-dark-color;
+    font-weight: 400;
+    text-align: left;
+}
+.box-text__about {
+    font-family: $last-font-stack;
+    color: $naitral-color;
+    font-size: $secondary-text-size;
+    font-weight: 400px;
+    line-height: $main-text-height;
+    text-align: left;
+}
