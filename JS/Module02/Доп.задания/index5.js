@@ -14,17 +14,14 @@
 const min = 1;
 const max = 100;
 
-for(let i = 1, max = 100; i < max; i+= 1) {
+for(let i = 1; i < max; i += 1) {
     console.log(`${max} % ${i} =`, max % i);
-    if ( i % 5 === 0 && i % 3 === 0){
+    if ( i % 5 === 0 && i%3 !== 0){
         console.log(i, " = Buzz" )}
         else {
-            if ( i%5 === 0 ){
-                console.log( i, " = Buzz" );
-            } else {
             if ( i%3 === 0 ){
                 console.log(i, " = Fizz" );
                 } else {
                     console.log(i );
                 };
-}}};
+}};
