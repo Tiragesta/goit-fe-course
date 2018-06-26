@@ -14,7 +14,7 @@ const num = 10;
 const newArray = [];
 
 for(const value of numbers ){
-    if(value > 10){
+    if(value > num){
         newArray.push(Number(value));
     }
     console.log(newArray);
