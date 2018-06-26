@@ -19,19 +19,11 @@ let logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 let login = prompt ('Введите Ваш логин');
 
 const checkLoginValidity = function(login) {
-  //let arr = login.split(' ');
-    console.log(login);
-    
+  
   const minLength = 4;
   const maxLength = 16;
   
-  for (let i = 0; i < login.length; i +=1 )  {
-    console.log(login.length) ;
-
-  if ( login.length >= minLength && login.length <= maxLength )
-    return true;
-    } return  false;
-  //console.log(login.length);
+ return login.length >= minLength && login.length <= maxLength
   };  
 
 console.log(checkLoginValidity(login)) ;
@@ -42,18 +34,7 @@ console.log(checkLoginValidity(login)) ;
 
 const checkIfLoginExists = function( logins, ...login ) {
 
-  console.log(logins);
-  console.log(login);
-
-  for ( const log of login) {
-           
-    const hasElem = logins.includes(login);
-    
-         if (!hasElem) {
-           return false;
-         } return true;
-       }
-       console.log(logins);
+  return logins.includes(login);
 }
 console.log(checkIfLoginExists(["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123ftgh"], login ));
   /*Далее напишите функцию addLogin(logins, login) которая:
@@ -87,25 +68,22 @@ console.log(checkIfLoginExists(["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "
 
 const addLogin = function ( logins, login ) {
 
-  checkLoginValidity(login)
-  function checkLoginValidity(login) {
-  if (login === 0) {
-    alert('Ошибка! Логин должен быть от 4 до 16 символов');
-  } checkIfLoginExists(logins, ...login);
-  
-  }
-  /*checkIfLoginExists(logins, ...login)
-  function checkIfLoginExists(logins, ...login) {
-    if (!hasElem) {
+  if (!checkLoginValidity(login)) {
+  return alert('Ошибка! Логин должен быть от 4 до 16 символов');
+  } else {
+    if (!checkIfLoginExists(logins, ...login)){
       logins.push(login);
-      alert('Логин успешно добавлен!');
-    } else {
-      alert('Такой логин уже используется!');
+      alert('Логин успешно добавлен!')
+  
+  };
+}
+      return alert('Такой логин уже используется!');
     }
-  }*/
+  
 
-} 
-addLogin(login)
+    addLogin(logins,login);
+
+    console.log('logins:', logins)
   
   
 
