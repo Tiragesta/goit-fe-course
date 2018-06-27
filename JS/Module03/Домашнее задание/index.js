@@ -73,7 +73,7 @@ const addLogin = function ( logins, login ) {
   } else {
     if (!checkIfLoginExists(logins, ...login)){
       logins.push(login);
-      alert('Логин успешно добавлен!')
+      return alert('Логин успешно добавлен!')
   
   };
 }
