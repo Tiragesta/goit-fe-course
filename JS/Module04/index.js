@@ -28,13 +28,13 @@ const order = {
     };
     this.onSuccess = function (){
         if(changeAmount >= 0){
-        return `Спасибо за покупку, ваша сдача ${this.changeAmount}`
-        } return `Спасибо за покупку`;
+        return alert (`Спасибо за покупку, ваша сдача ${this.changeAmount}`)
+        } return alert (`Спасибо за покупку`);
     };
     this.onError = function(){
-        if(totalPrice > customerMoney){
-            return 'Очень жаль, вам не хватает денег на покупки'
-        } return this.countChange();
+        
+            return alert ('Очень жаль, вам не хватает денег на покупки');
+       
     };
     
     this.countTotalPrice = function(order){
@@ -53,9 +53,7 @@ const order = {
     this.countChange = function(){
         if(this.customerMoney >= this.totalPrice){
             this.changeAmount =  this.customerMoney - this.totalPrice;
-            
-            console.log(this.changeAmount);
-        } return this.changeAmount ;
+        } return null ;
     }
     this.reset = function(){
         this.totalPrice = 0;
@@ -76,11 +74,11 @@ console.log(mango.changeAmount); // 0
 
 
 // Вызываем метод greet
-console.log(mango.greet()); // Здравствуйте, вас обслуживает Mango
+mango.greet(); // Здравствуйте, вас обслуживает Mango
 
 // Вызываем метод countTotalPrice для подсчета общей суммы
 // передавая order - список покупок пользователя
-console.log(mango.countTotalPrice(order));
+mango.countTotalPrice(order);
 
 // Проверям что посчитали
 console.log('Общая сумма: ', mango.totalPrice); // 110
@@ -89,7 +87,7 @@ console.log('Общая сумма: ', mango.totalPrice); // 110
 mango.getCustomerMoney(150);
 
 // Проверяем что в поле с деньгами пользователя
-console.log(mango.customerMoney); // 300
+mango.customerMoney; // 300
 
 
 // Вызываем countChange для подсчета сдачи
@@ -101,14 +99,14 @@ console.log(result); // 190
 // Проверяем результат подсчета денег
 if(result !== 0) {
    // При успешном обслуживании вызываем метод onSuccess
-  console.log(mango.onSuccess()); // Спасибо за покупку, ваша сдача 190
+  mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
 } else {
   // При неудачном обслуживании вызываем метод onError   
-  console.log(mango.onError()); // Очень жаль, вам не хватает денег на покупки
+  mango.onError(); // Очень жаль, вам не хватает денег на покупки
 }
 
 // Вызываем reset при любом исходе обслуживания
-console.log(mango.reset());
+mango.reset();
 
 
 
