@@ -27,7 +27,7 @@ const order = {
         return `Здравствуйте, вас обслуживает ${name}`
     };
     this.onSuccess = function (){
-        if(changeAmount >= 0){
+        if(changeAmount > 0){
         return alert (`Спасибо за покупку, ваша сдача ${this.changeAmount}`)
         } return alert (`Спасибо за покупку`);
     };
@@ -40,7 +40,7 @@ const order = {
     this.countTotalPrice = function(order){
         for (let item in order) {
             
-           this.totalPrice += order[item] * productsDatabase[item];
+           this.totalPrice += order[item] * this.productsDatabase[item];
            
         } return this.totalPrice;  
   
@@ -97,7 +97,7 @@ const result = mango.countChange();
 console.log(result); // 190
 
 // Проверяем результат подсчета денег
-if(result !== 0) {
+if(result === 0) {
    // При успешном обслуживании вызываем метод onSuccess
   mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
 } else {
