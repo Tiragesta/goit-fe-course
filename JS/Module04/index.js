@@ -97,7 +97,7 @@ const result = mango.countChange();
 console.log(result); // 190
 
 // Проверяем результат подсчета денег
-if(result !== 0) {
+if(result !== null) {
    // При успешном обслуживании вызываем метод onSuccess
   mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
 } else {
