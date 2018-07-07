@@ -52,7 +52,7 @@ const order = {
     }
     this.countChange = function(){
         if(this.customerMoney >= this.totalPrice){
-            this.changeAmount =  this.customerMoney - this.totalPrice;
+           return this.changeAmount =  this.customerMoney - this.totalPrice;
         } return null ;
     }
     this.reset = function(){
@@ -97,7 +97,7 @@ const result = mango.countChange();
 console.log(result); // 190
 
 // Проверяем результат подсчета денег
-if(result === 0) {
+if(result !== 0) {
    // При успешном обслуживании вызываем метод onSuccess
   mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
 } else {
