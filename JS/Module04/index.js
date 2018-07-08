@@ -24,7 +24,7 @@ const order = {
     this.customerMoney = customerMoney;
     this.changeAmount = changeAmount;
     this.greet = function (){
-        return `Здравствуйте, вас обслуживает ${name}`
+        return alert(`Здравствуйте, вас обслуживает ${name}`)
     };
     this.onSuccess = function (){
         if(changeAmount > 0){
@@ -84,7 +84,7 @@ mango.countTotalPrice(order);
 console.log('Общая сумма: ', mango.totalPrice); // 110
 
 // Вызываем getCustomerMoney для запроса денег покупателя
-mango.getCustomerMoney(150);
+mango.getCustomerMoney(300);
 
 // Проверяем что в поле с деньгами пользователя
 mango.customerMoney; // 300
