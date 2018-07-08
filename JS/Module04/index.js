@@ -24,12 +24,12 @@ const order = {
     this.customerMoney = customerMoney;
     this.changeAmount = changeAmount;
     this.greet = function (){
-        return `Здравствуйте, вас обслуживает ${name}`
+        return alert(`Здравствуйте, вас обслуживает ${name}`)
     };
     this.onSuccess = function (){
-        if(changeAmount >= 0){
-        return alert (`Спасибо за покупку, ваша сдача ${this.changeAmount}`)
-        } return alert (`Спасибо за покупку`);
+        if(this.changeAmount > 0){
+           return alert (`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
+        } else return alert (`Спасибо за покупку`);
     };
     this.onError = function(){
         
@@ -40,7 +40,7 @@ const order = {
     this.countTotalPrice = function(order){
         for (let item in order) {
             
-           this.totalPrice += order[item] * productsDatabase[item];
+           this.totalPrice += order[item] * this.productsDatabase[item];
            
         } return this.totalPrice;  
   
@@ -51,8 +51,8 @@ const order = {
         console.log(this.customerMoney);
     }
     this.countChange = function(){
-        if(this.customerMoney >= this.totalPrice){
-            this.changeAmount =  this.customerMoney - this.totalPrice;
+        if(this.customerMoney > this.totalPrice){
+            return this.changeAmount = this.customerMoney - this.totalPrice;
         } return null ;
     }
     this.reset = function(){
@@ -71,7 +71,7 @@ console.log(mango.productsDatabase); // ссылка на базу данных 
 console.log(mango.totalPrice); // 0
 console.log(mango.customerMoney); // 0
 console.log(mango.changeAmount); // 0
-
+//console.log(mango.onError());
 
 // Вызываем метод greet
 mango.greet(); // Здравствуйте, вас обслуживает Mango
@@ -84,29 +84,35 @@ mango.countTotalPrice(order);
 console.log('Общая сумма: ', mango.totalPrice); // 110
 
 // Вызываем getCustomerMoney для запроса денег покупателя
-mango.getCustomerMoney(150);
+mango.getCustomerMoney(111);
 
 // Проверяем что в поле с деньгами пользователя
 mango.customerMoney; // 300
 
 
 // Вызываем countChange для подсчета сдачи
-const result = mango.countChange();
+const result = mango.countChange()
+    //console.log(result); // 190
 
 // Проверяем что нам вернул countChange
 console.log(result); // 190
 
 // Проверяем результат подсчета денег
-if(result !== 0) {
+if(result !== null) {
    // При успешном обслуживании вызываем метод onSuccess
-  mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
-} else {
+mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
+} else{
   // При неудачном обслуживании вызываем метод onError   
-  mango.onError(); // Очень жаль, вам не хватает денег на покупки
-}
+ mango.onError()}; // Очень жаль, вам не хватает денег на покупки
+
 
 // Вызываем reset при любом исходе обслуживания
 mango.reset();
+
+// Проверяем значения полей после reset
+console.log(mango.totalPrice); // 0
+console.log(mango.customerMoney); // 0
+console.log(mango.changeAmount); // 0
 
 
 
