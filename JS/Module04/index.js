@@ -18,16 +18,15 @@ const order = {
   
   function Cashier (name, productsDatabase, totalPrice = 0, customerMoney = 0, changeAmount = 0){
     this.name = name;
-    
     this.productsDatabase = productsDatabase;
     this.totalPrice = totalPrice;
     this.customerMoney = customerMoney;
     this.changeAmount = changeAmount;
     this.greet = function (){
-        return alert(`Здравствуйте, вас обслуживает ${name}`)
+        return alert(`Здравствуйте, вас обслуживает ${this.name}`)
     };
     this.onSuccess = function (){
-        if(changeAmount > 0){
+        if(this.changeAmount > 0){
         return alert (`Спасибо за покупку, ваша сдача ${this.changeAmount}`)
         } return alert (`Спасибо за покупку`);
     };
@@ -51,7 +50,7 @@ const order = {
         console.log(this.customerMoney);
     }
     this.countChange = function(){
-        if(this.customerMoney >= this.totalPrice){
+        if(this.customerMoney > this.totalPrice){
            return this.changeAmount =  this.customerMoney - this.totalPrice;
         } return null ;
     }
@@ -107,6 +106,12 @@ if(result !== null) {
 
 // Вызываем reset при любом исходе обслуживания
 mango.reset();
+
+// Проверяем значения полей после reset
+console.log(mango.totalPrice); // 0
+console.log(mango.customerMoney); // 0
+console.log(mango.changeAmount); // 0
+
 
 
 
