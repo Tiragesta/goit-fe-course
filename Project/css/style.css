@@ -298,16 +298,19 @@ header{
     text-align: left;
     margin-top:160px;
     margin-bottom: 57px;
-    position: relative;
+    
 }
 .programm:hover{
     color: #ffffff;
     background: #000000;
 }
+.programm-main{
+    position: relative;
+}
 .programm-img{
     position: absolute;
-    top:2500px;
-    right:27%;
+    top:-7.03%;
+    left:84.18%;
    
 }
 .programm__number{
