@@ -88,7 +88,7 @@ class Hamburger {
      * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
      */
     calculatePrice() {
-        return Hamburger.SIZES[this._size].price + Hamburger.STUFFINGS[this._stuffing].price + Hamburger.TOPPINGS[this._toppings].price;
+        return Hamburger.SIZES[this._size].price + Hamburger.STUFFINGS[this._stuffing].price + this._toppings.reduce((acc,x)=>acc + Hamburger.TOPPINGS[x].price,0);
     }
   
     /**
@@ -98,7 +98,7 @@ class Hamburger {
      * Попробуйте сделать это геттером чтобы можно было обращаться как obj.calories и нам вернет сумму.
      */
     calculateCalories() {
-        return Hamburger.SIZES[this._size].calories + Hamburger.STUFFINGS[this._stuffing].calories + Hamburger.TOPPINGS[this._toppings].calories;
+        return Hamburger.SIZES[this._size].calories + Hamburger.STUFFINGS[this._stuffing].calories + this._toppings.reduce((acc,x)=>acc + Hamburger.TOPPINGS[x].calories,0);
     }
   }
   
@@ -152,6 +152,7 @@ class Hamburger {
         calories: 5,
     }
   };
+
   
   /* Вот как может выглядеть использование этого класса */
   
