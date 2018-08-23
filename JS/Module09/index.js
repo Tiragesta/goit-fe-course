@@ -10,6 +10,7 @@ const laps = {
     startTime: null,
     isActive: false,
     deltaTime: 0,
+    laps: [],
     start(){
         if(this.isActive) return;
 
@@ -38,12 +39,20 @@ const laps = {
     },
 
     lap(){
-        const arr = [];
-        for(let i=0; i < arr.length; i += 1){
-            arr.push(this.startTime);
-        }
+        const lapTime = formatTime(this.deltaTime);
+        this.laps.push(lapTime);
+        
+        console.log(this.laps);
+        const ul = document.querySelector('.js-laps');
 
-    }
+        console.log(this.laps);
+        const li = document.createElement('li');
+        li.textContent = this.laps[this.laps.length -1];
+ 
+    ul.appendChild(li);
+   
+   return ul;
+    },
 };
 
 function updateClockFace (time) {
@@ -86,15 +95,6 @@ function handleResetBtnClick(){
 
 function handleLapBtnClick(){
    laps.lap();
-   
-   const ul = document.querySelector('.js-laps');
-   const li = document.createElement('li');
-   li.textContent = this.deltaTime;
-
-   ul.appendChild(li);
-
-   return ul;
-
 }
 
 
