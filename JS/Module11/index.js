@@ -94,13 +94,12 @@ const laptops = [
   ];
 
 const form = document.querySelector('.js-form');
-const btnReset = form.querySelector('.js-btn-reset');
-const source = document.querySelector('#laptop-template').innerHTML.trim();
-const card = document.querySelector('.laptop_card');
-const template = Handlebars.compile(source);
+const btnReset = document.querySelector('.js-btn-reset');
+const card = document.querySelector('#laptop_card');
+
 
 form.addEventListener('submit', handleBtnClick);
-//btnReset.addEventListener('submit', handleBtnReset);
+btnReset.addEventListener('click', handleBtnReset);
 
 const filter = {
   size: [],
@@ -108,8 +107,8 @@ const filter = {
   release_date: []
 }
 
-function handleBtnClick(e){
-  //e.preventDafault();
+function handleBtnClick(event){
+  event.preventDefault();
 
   const checkboxes = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'));
   const filter = checkboxes.reduce((acc, checkbox) => {
@@ -120,26 +119,51 @@ function handleBtnClick(e){
     color: [],
     release_date: []
 })
+
+checkedLaptops(filter);
+
+
 console.log(filter);
+
+form.reset();
 }
 
-const findLaptops = laptops.filter(laptop => laptop.size === filter.size && laptop.color === 'white' && laptop.release_date === 2015);
+function checkedLaptops(filter){
+  const size = filter.size;
+  const color = filter.color;
+  const release_date = filter.release_date;
+
+  const findLaptops = laptops.filter(laptop => {
+    if(
+      (laptop.size == size && laptop.color == color && laptop.release_date == release_date) ||
+      (laptop.size == size && laptop.color == color) ||
+      (laptop.size == size && laptop.release_date == release_date) ||
+      (laptop.color == color && laptop.release_date == release_date) ||
+      (laptop.size == size) ||
+      (laptop.color == color) ||
+      (laptop.release_date == release_date) 
+    ) {
+      return laptop;
+    }
+  });
 
 console.log(findLaptops)
 
-
-
-//function handleBtnReset(){
-//  form.reset();
-//}
-
-
+const source = document.querySelector('#laptop-template').innerHTML.trim();
+const template = Handlebars.compile(source);
 const markup = template({findLaptops});
 
-//console.log(markup);
-
-
 card.innerHTML = markup;
+
+}
+
+function handleBtnReset(e){ 
+  
+  card.remove();
+
+}
+
+
 
 
 

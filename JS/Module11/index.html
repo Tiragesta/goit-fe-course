@@ -34,13 +34,13 @@
                   </ul>
                 </section>
                 <button type="submit">Filter</button>
-                <button type="reset">Clear</button>
+                <button class="js-btn-reset" type="reset">Clear</button>
         </form>
 
-        <div class="laptop_card"></div>
+        <div id="laptop_card"></div>
 
         <template id="laptop-template">
-            {{#each laptops}}
+            <!--{{#each findLaptops}}-->
             
             <img src="{{img}}" alt="laptop" class="laptops_img">
             <ul class="laptops_info">
@@ -51,7 +51,7 @@
               <li><p class="details">Price: {{price}}</p></li>
               <li><p class="details">Description: {{descr}}</p></li>
             </ul>
-            {{/each}}
+            <!--{{/each}}-->
         </template>
 
 
