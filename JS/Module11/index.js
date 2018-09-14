@@ -134,17 +134,12 @@ function checkedLaptops(filter){
   const release_date = filter.release_date;
 
   const findLaptops = laptops.filter(laptop => {
-    if(
-      (laptop.size == size && laptop.color == color && laptop.release_date == release_date) ||
-      (laptop.size == size && laptop.color == color) ||
-      (laptop.size == size && laptop.release_date == release_date) ||
-      (laptop.color == color && laptop.release_date == release_date) ||
-      (laptop.size == size) ||
-      (laptop.color == color) ||
-      (laptop.release_date == release_date) 
-    ) {
-      return laptop;
-    }
+
+    return size.length ? size.includes(String(laptop.size)) : true &&
+           color.length ? color.includes(String(laptop.color)) : true &&
+           release_date.length !== 0 ? release_date.includes(String(laptop.release_date)) : true;
+ 
+    
   });
 
 console.log(findLaptops)
