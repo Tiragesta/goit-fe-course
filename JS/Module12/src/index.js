@@ -2,55 +2,65 @@
 
 const note = document.querySelector('.js-note-edit');
 const input = note.querySelector('input');
-
 const noteList = document.querySelector('#note-list');
+
+let list = [];
 
 note.addEventListener('submit', handleAddNote);
 noteList.addEventListener('click', handleDeleteNote);
 
 
-if(localStorage.getItem('URL') !== null){
-    const someNote = localStorage.getItem('URL');
-    
-    
-    noteList.insertAdjacentHTML('afterbegin', someNote);
-}
-
 function handleAddNote(event){
     event.preventDefault();
-    
-    let urlList = {};
+
     let text = input.value;
-
-    urlList.id = new Date();
-    urlList.text = text;
-
-    console.log(urlList);
     
-    let session = [];
-    console.log(session);
+    let temp = {};
+    temp.id = new Date();
+    temp.text = text;
 
-    //for(let i=0; i<input.length; i+=1){
-        session.push(urlList);
+    console.log(temp);
 
-     
-    //}  
-    console.log('obj in arr: ', session);
-    
+    let i = list.length;
+    list[i] = temp;
+
+    console.log(list);
+
+    localStorage.setItem('URL', JSON.stringify(list))
+
     makeNote(text);
-        
+
     note.reset();
 }
 
-function makeNote(text){
-    const source = document.querySelector('#list-template').innerHTML.trim();
-    const template = Handlebars.compile(source);
-    const markup = template({text});
-    
-    localStorage.setItem('URL', text);
-    
-    noteList.insertAdjacentHTML('afterbegin', markup);
+if(localStorage.getItem('URL') !== undefined){
+    list = JSON.parse(localStorage.getItem('URL'));
+    console.log(list)
+    makeNote({list});
 }
+
+function contains(list, text) {
+    for (var i = 0; i < list.length; i++) {
+        if (list[i] === text) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function makeNote(text){ 
+
+    const findNote = list.find(item => {
+        return text.length ? text.includes(String(list.text)): false
+    });
+
+    console.log('find', findNote)
+        const source = document.querySelector('#list-template').innerHTML.trim();
+        const template = Handlebars.compile(source);
+        const markup = template({text});
+        
+        noteList.insertAdjacentHTML('afterbegin', markup); 
+};
 
 function handleDeleteNote(event){
     const nodeName = event.target.nodeName;
@@ -60,4 +70,8 @@ function handleDeleteNote(event){
     parent.remove();
 };
 }
+
+//var animals = ['dog', 'cat', 'hamster', 'bird', 'fish'];
+
+
 
