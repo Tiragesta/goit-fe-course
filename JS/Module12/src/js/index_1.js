@@ -8,15 +8,18 @@ noteList.addEventListener('click', handleDeleteNote);
 let localData = [];
 
 if(localStorage.getItem('cards') !== undefined){
-    localData = JSON.parse(localStorage.getItem('cards'));
+    if (JSON.parse(localStorage.getItem('cards'))) {
+      localData = JSON.parse(localStorage.getItem('cards'));
+    }
+ 
     console.log(localData)
+ 
     for(let j=0; j<localData.length; j+=1){
         makeNote(localData[j]);
-    }   
+    }  
 }
 
 let arr = [];
-
 
 function handleAddNote(event){
     event.preventDefault();

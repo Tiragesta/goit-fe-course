@@ -13,7 +13,7 @@ gulp.task('concat', function() {
     .pipe(babel({
       presets: ['env']
       }))
-    .pipe(concat('index.js'))
+    .pipe(concat('index_1.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(uglify())
     .pipe(gulp.dest('build/js'));
