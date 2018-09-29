@@ -1,0 +1,193 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+    margin: 0 auto;
+}
+.container {
+    margin: auto;
+    text-align: center;
+    max-width: 1150px;
+    min-width: 320px;
+}
+/*header*/
+
+.log, .current {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    border: 2px solid transparent;
+    padding: 0 10px;
+}
+.log:hover {
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+.current{
+    display: none;
+}
+
+.logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    background: #1a1915;
+    opacity: 0.7;   
+}
+
+/*main*/
+
+h1 {
+    text-align: center;
+    font-family: Montserrat;
+    color:#333333;
+    font-size: 35px;
+    font-weight: 700;   
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background: #befffc;
+    margin-bottom: 10px;
+}    
+input {
+    width: 280px;
+    height: 52px;
+    margin-left: 30px;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 700;
+    text-indent: 20px;
+    text-transform: uppercase;
+    margin: 0px;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+input:not(:nth-of-type(3n+3)) {
+    margin-bottom: auto;
+}
+.button {
+    width: 240px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+.button:hover {
+    color: #ffffff;
+    background-color: #fed136;
+}
+
+.button {
+    width: 240px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*footer*/
+
+.footer {
+    margin: 0 auto;
+    background: #e5e5e5;    
+}
+.foot-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.foot-box__menu{
+    margin: 10px 0;
+}
+.foot-box__mobile-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.foot-box__item {
+    font-family: Montserrat;
+    color:#333333;
+    font-size: 14px;
+    font-weight: 400;
+}
+.foot-box__item::before {
+    content: '\00A9';
+    margin-right: 3px;
+}
+hr {
+    color: #e5e5e5;
+    margin-bottom: 10px;
+}
+.foot-box__mobile-app--AppStore{
+    width: 120px;
+    height: 36px;
+    background: url(../img/AppStore.jpg) no-repeat top right;
+    cursor: pointer;
+}
+.foot-box__mobile-app--GooglePlay{
+    width: 120px;
+    height: 36px;
+    background: url(../img/GooglePlay.jpg) no-repeat top right;
+    cursor: pointer;
+}
+h3 {
+    text-align: center;
+    font-family: Montserrat;
+    color:#333333;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.menu-list-point{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu-list-item{
+    color: #000000;
+}
+
+/*footer_icon*/
+li{
+    list-style: none;
+}
+.foot-box__menu--icon ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
